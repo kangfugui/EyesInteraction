@@ -10,34 +10,32 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet var sceneView: ARSCNView!
+    
+    fileprivate lazy var focusView: UIView = {
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        view.backgroundColor = UIColor.gray
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the view's delegate
         sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+        sceneView.automaticallyUpdatesLighting = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        sceneView.session.run(configuration)
+        let configuration = ARFaceTrackingConfiguration()
+        configuration.providesAudioData = false
+        configuration.isLightEstimationEnabled = true
+        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,17 +44,56 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-
-    // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        let btn = UIButton()
+//        btn.frame = CGRect(x: 0, y: 50, width: 100, height: 30)
+//        btn.backgroundColor = .red
+//        btn.addTarget(self, action: #selector(btnDidTap(_:)), for: .touchUpInside)
+//        view.addSubview(btn)
+//
+        let window = UIApplication.shared.keyWindow
+        window?.addSubview(focusView)
+//        let targetView = window?.hitTest(CGPoint(x: 10, y: 55), with: nil)
+//
+//        if let control = targetView as? UIControl {
+//            let event = control.allControlEvents
+//            control.sendActions(for: event)
+//        }
     }
-*/
+    
+    @objc private func btnDidTap(_ sender: Any) {
+        print("hello   world !!!!!")
+    }
+}
+
+extension ViewController: ARSCNViewDelegate {
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let faceAnchor = anchor as? ARFaceAnchor
+            else { return }
+        
+        print(faceAnchor.lookAtPoint)
+//        faceAnchor.leftEyeTransform
+//        faceAnchor.rightEyeTransform
+        
+        
+        
+//        guard let lookInLeft = faceAnchor.blendShapes[.eyeLookInLeft] as? Float,
+//            let lookInRight = faceAnchor.blendShapes[.eyeLookInRight] as? Float,
+//            let lookOutLeft = faceAnchor.blendShapes[.eyeLookOutLeft] as? Float,
+//            let lookOutRight = faceAnchor.blendShapes[.eyeLookOutRight] as? Float,
+//            let lookUpLeft = faceAnchor.blendShapes[.eyeLookUpLeft] as? Float,
+//            let lookUpRight = faceAnchor.blendShapes[.eyeLookUpRight] as? Float,
+//            let lookDownLeft = faceAnchor.blendShapes[.eyeLookDownLeft] as? Float,
+//            let lookDownRight = faceAnchor.blendShapes[.eyeLookDownRight] as? Float
+//            else { return }
+        
+//        let mid = (left.floatValue + right.floatValue) / 2
+//        print(mid)
+    }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
@@ -65,11 +102,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func sessionWasInterrupted(_ session: ARSession) {
         // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
     }
     
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
 }

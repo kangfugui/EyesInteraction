@@ -7,15 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2716FA8F227086A200CAEE09 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2716FA8E227086A200CAEE09 /* WebKit.framework */; };
+		2762667522674A58008CB6F1 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2762667422674A58008CB6F1 /* BaseNavigationController.swift */; };
+		27626677226751BD008CB6F1 /* HandleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27626676226751BD008CB6F1 /* HandleManager.swift */; };
 		278F69D82254D408008E97EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F69D72254D408008E97EA /* AppDelegate.swift */; };
 		278F69DA2254D408008E97EA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 278F69D92254D408008E97EA /* art.scnassets */; };
 		278F69DC2254D409008E97EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F69DB2254D409008E97EA /* ViewController.swift */; };
 		278F69DF2254D409008E97EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278F69DD2254D409008E97EA /* Main.storyboard */; };
 		278F69E12254D409008E97EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278F69E02254D409008E97EA /* Assets.xcassets */; };
 		278F69E42254D409008E97EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278F69E22254D409008E97EA /* LaunchScreen.storyboard */; };
+		27AEDF782264AA7700D6D3E6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AEDF772264AA7700D6D3E6 /* Extension.swift */; };
+		27F5D1CE22630D0E0087FC10 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F5D1CC22630D0E0087FC10 /* HomeViewController.swift */; };
+		27F5D1CF22630D0E0087FC10 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F5D1CD22630D0E0087FC10 /* HomeViewController.xib */; };
+		27F5D1D222630D230087FC10 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F5D1D022630D230087FC10 /* WebViewController.swift */; };
+		27F5D1D322630D230087FC10 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F5D1D122630D230087FC10 /* WebViewController.xib */; };
+		27F5D1D722631E330087FC10 /* FocusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F5D1D622631E330087FC10 /* FocusManager.swift */; };
+		27F5D1D9226374180087FC10 /* FaceTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F5D1D8226374180087FC10 /* FaceTrackingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2716FA8E227086A200CAEE09 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		2762667422674A58008CB6F1 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		27626676226751BD008CB6F1 /* HandleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleManager.swift; sourceTree = "<group>"; };
 		278F69D42254D408008E97EA /* EyesInteraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyesInteraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		278F69D72254D408008E97EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		278F69D92254D408008E97EA /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -24,6 +37,13 @@
 		278F69E02254D409008E97EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		278F69E32254D409008E97EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		278F69E52254D409008E97EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AEDF772264AA7700D6D3E6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		27F5D1CC22630D0E0087FC10 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		27F5D1CD22630D0E0087FC10 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		27F5D1D022630D230087FC10 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		27F5D1D122630D230087FC10 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		27F5D1D622631E330087FC10 /* FocusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusManager.swift; sourceTree = "<group>"; };
+		27F5D1D8226374180087FC10 /* FaceTrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2716FA8F227086A200CAEE09 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2716FA8D227086A200CAEE09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2716FA8E227086A200CAEE09 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		278F69CB2254D408008E97EA = {
 			isa = PBXGroup;
 			children = (
 				278F69D62254D408008E97EA /* EyesInteraction */,
 				278F69D52254D408008E97EA /* Products */,
+				2716FA8D227086A200CAEE09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +93,15 @@
 				278F69E02254D409008E97EA /* Assets.xcassets */,
 				278F69E22254D409008E97EA /* LaunchScreen.storyboard */,
 				278F69E52254D409008E97EA /* Info.plist */,
+				27F5D1CC22630D0E0087FC10 /* HomeViewController.swift */,
+				27F5D1CD22630D0E0087FC10 /* HomeViewController.xib */,
+				27F5D1D022630D230087FC10 /* WebViewController.swift */,
+				27F5D1D122630D230087FC10 /* WebViewController.xib */,
+				27F5D1D622631E330087FC10 /* FocusManager.swift */,
+				27F5D1D8226374180087FC10 /* FaceTrackingManager.swift */,
+				27AEDF772264AA7700D6D3E6 /* Extension.swift */,
+				2762667422674A58008CB6F1 /* BaseNavigationController.swift */,
+				27626676226751BD008CB6F1 /* HandleManager.swift */,
 			);
 			path = EyesInteraction;
 			sourceTree = "<group>";
@@ -99,6 +138,7 @@
 				TargetAttributes = {
 					278F69D32254D408008E97EA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -127,6 +167,8 @@
 			files = (
 				278F69DA2254D408008E97EA /* art.scnassets in Resources */,
 				278F69E42254D409008E97EA /* LaunchScreen.storyboard in Resources */,
+				27F5D1CF22630D0E0087FC10 /* HomeViewController.xib in Resources */,
+				27F5D1D322630D230087FC10 /* WebViewController.xib in Resources */,
 				278F69E12254D409008E97EA /* Assets.xcassets in Resources */,
 				278F69DF2254D409008E97EA /* Main.storyboard in Resources */,
 			);
@@ -139,8 +181,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27626677226751BD008CB6F1 /* HandleManager.swift in Sources */,
+				2762667522674A58008CB6F1 /* BaseNavigationController.swift in Sources */,
 				278F69DC2254D409008E97EA /* ViewController.swift in Sources */,
 				278F69D82254D408008E97EA /* AppDelegate.swift in Sources */,
+				27AEDF782264AA7700D6D3E6 /* Extension.swift in Sources */,
+				27F5D1D722631E330087FC10 /* FocusManager.swift in Sources */,
+				27F5D1CE22630D0E0087FC10 /* HomeViewController.swift in Sources */,
+				27F5D1D222630D230087FC10 /* WebViewController.swift in Sources */,
+				27F5D1D9226374180087FC10 /* FaceTrackingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66593D855N;
 				INFOPLIST_FILE = EyesInteraction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,8 +344,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kangyang.EyesInteraction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66593D855N;
 				INFOPLIST_FILE = EyesInteraction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,8 +362,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kangyang.EyesInteraction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
