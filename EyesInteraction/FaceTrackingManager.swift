@@ -171,6 +171,7 @@ class FaceTrackingManager: NSObject {
             let x = Int(round(smoothEyeLookAtPositionX + self.phoneScreenPointSize.width / 2))
             let y = Int(round(smoothEyeLookAtPositionY + self.phoneScreenPointSize.height / 2))
             
+            //            Todo:光标飘的bug待修复
             let point = CGPoint(x: x, y: y)
             self.lookAtPoints.append(point)
             
