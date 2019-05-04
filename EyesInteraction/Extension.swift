@@ -31,8 +31,7 @@ extension Collection where Element == CGFloat, Index == Int {
 
 extension CGPoint {
     
-    static func diff() {
-        
+    func diff(_ compare: CGPoint) -> CGFloat {
+        return max(abs(x-compare.x), abs(y-compare.y))
     }
-    
 }
