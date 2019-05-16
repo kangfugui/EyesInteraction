@@ -15,7 +15,9 @@ class HandleManager: NSObject {
     func triggerAt(_ point: CGPoint) {
         
         let window = UIApplication.shared.keyWindow
-        let targetView = window?.hitTest(point, with: nil)
+        let superview = window?.rootViewController?.view
+        
+        let targetView = superview?.hitTest(point, with: nil)
         if let control = targetView as? UIControl {
             let event = control.allControlEvents
             control.sendActions(for: event)

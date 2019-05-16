@@ -93,18 +93,19 @@ class FaceTrackingManager: NSObject {
         lookAtTargetEyeLNode.position.z = 2
         lookAtTargetEyeRNode.position.z = 2
         
-        Timer.scheduledTimer(
+        let timer = Timer(
             timeInterval: 1.0,
             target: self,
             selector: #selector(triggerTimer(_:)),
             userInfo: nil,
             repeats: true)
+        RunLoop.main.add(timer, forMode: RunLoop.Mode.default)
     }
     
     @objc fileprivate func triggerTimer(_ sender: Timer) {
         
-        self.lookAtPoints = Array(self.lookAtPoints.suffix(100))
-        guard lookAtPoints.count == 100 else { return }
+        self.lookAtPoints = Array(self.lookAtPoints.suffix(50))
+        guard lookAtPoints.count == 50 else { return }
         
         guard let first = lookAtPoints.first, let last = lookAtPoints.last
             else { return }
@@ -174,7 +175,7 @@ class FaceTrackingManager: NSObject {
             let point = CGPoint(x: x, y: y)
             if let last = self.lookAtPoints.last {
                 let diff = point.diff(last)
-                if diff < 10.0 {
+                if diff < 5.0 {
                     return
                 }
             }

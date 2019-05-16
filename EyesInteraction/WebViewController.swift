@@ -28,10 +28,12 @@ extension WebViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         
-        webView.evaluateJavaScript("document.elementFromPoint(0, 0);") { (result, err) in
-            print(result ?? "")
-            print(err ?? "")
-        }
+//        let script = "var element = document.elementFromPoint(150, 200); element.style.backgroundColor = 'lightgreen'; element.click();"
+        
+//        webView.evaluateJavaScript(script) { (result, err) in
+//            print(result ?? "no result")
+//            print(err ?? "no err")
+//        }
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
